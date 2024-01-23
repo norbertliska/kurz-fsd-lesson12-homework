@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  app:
+    image: ghcr.io/norbertliska/lesson12-homework:build_1
+    ports:
+      - 5000:3000
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+    depends_on:
+      - redis
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
