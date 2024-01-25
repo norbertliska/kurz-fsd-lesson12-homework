@@ -17,7 +17,7 @@ docker build -t lesson12-homework:latest .
 
 ## testovacie spustenie appky
 ```
-docker run --env PORT=3000 --env HOST=0.0.0.0 -p 3000:3000 lesson12-homework-app:latest
+docker run --env PORT=3000 --env HOST=0.0.0.0 -p 3000:3000 lesson12-homework:latest
 ```
 errors kvoli chybajucemu redisu, jasna vec **ale hlavne ze ide:**
 
